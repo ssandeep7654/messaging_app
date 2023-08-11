@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Chatrooms</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @chatrooms.each do |chatroom| %>
+      <tr>
+        <td><%= chatroom.name %></td>
+        <td><%= link_to 'Open Chat', chatroom %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New chatroom", new_chatroom_path %>
